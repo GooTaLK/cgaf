@@ -1,21 +1,42 @@
 {
 	"name": "cgaf",
 	"version": "1.0.0",
-	"description": "",
+	"description": "Esta es la plantilla de una aplicación de chat obtenida gracias a un tutorial de youtube (canal -> Fazt - https://www.youtube.com/channel/UCX9NJ471o7Wie1DQe94RVIg) con algunas modificaciones por el cambio de autor.",
 	"main": "src/index.js",
 	"scripts": {
-		"dev": "nodemon src/index"
+		"dev": "webpack --mode development",
+		"dev:nodemon": "nodemon src/index",
+		"dev:server": "webpack serve --mode development",
+		"build": "webpack --mode production",
+		"start": "node dist/app-bundle.js"
 	},
-	"keywords": [],
-	"author": "",
-	"license": "ISC",
+	"keywords": [
+		"chat",
+		"socket.io",
+		"node-express-webpack",
+		"amateur"
+	],
+	"author": "gootalk",
+	"license": "MIT",
 	"dependencies": {
 		"express": "^4.17.1",
 		"mongoose": "^5.12.11",
 		"socket.io": "^4.1.2"
 	},
 	"devDependencies": {
+		"@babel/core": "^7.14.3",
+		"@babel/preset-env": "^7.14.2",
+		"babel-loader": "^8.2.2",
+		"css-loader": "^5.2.6",
 		"dotenv": "^10.0.0",
-		"nodemon": "^2.0.7"
+		"html-loader": "^2.1.2",
+		"html-webpack-plugin": "^5.3.1",
+		"mini-css-extract-plugin": "^1.6.0",
+		"nodemon": "^2.0.7",
+		"nodemon-webpack-plugin": "^4.5.2",
+		"webpack": "^5.38.0",
+		"webpack-cli": "^4.7.0",
+		"webpack-dev-server": "^3.11.2",
+		"webpack-node-externals": "^3.0.0"
 	}
 }

@@ -1,3 +1,5 @@
+import styles from '../css/main.css';
+
 const d = document;
 
 //Obteniendo elementos DOM de card
